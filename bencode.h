@@ -1,7 +1,3 @@
-// BENCODE.C
-// bencode.h - v0.1 - 2026
-// public domain - no warranty implied, use at your own risk
-
 #ifndef BENCODE_H
 #define BENCODE_H
 
