@@ -8,7 +8,7 @@
 
 What is [Bencode](https://en.wikipedia.org/wiki/Bencode)?
 
-[This library]() provides a bencode validator, bencode human readable formatted printing and primitives to read the bencode stream.
+[This library](https://github.com/0riginaln0/bencode) provides a bencode validator, bencode human readable formatted printing and primitives to read the bencode stream.
 
 - Zero-allocations with minimal state
 - Error messages with column location
