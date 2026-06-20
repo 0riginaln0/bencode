@@ -1,9 +1,4 @@
-# ============================================================
 # BENCODE TEST SUITE
-# ============================================================
-# Expected values are shown as JSON‑like literals.
-# "error" means the input must be rejected.
-# ============================================================
 
 # ----- Integers -----
 i2e 2
@@ -22,7 +17,7 @@ i-9223372036854775808e -9223372036854775808
 
 # ----- Strings -----
 0: ""
-02:xy error                  # leading zeros in length
+02:xy error                 # leading zeros in length
 1: error                    # length too large (unexpected end)
 2:abfdjslhfld error         # trailing garbage
 4:spam "spam"
@@ -44,11 +39,11 @@ d3:agei25e4:eyes4:bluee {"age": 25, "eyes": "blue"}
 d3:fooe error               # key without value
 di1e0:e error               # key is not a string
 d3:keyi1ee {"key": 1}
-d1:a1:ad1:b1:bee {"a": "a", "d": {"b": "b"}}
-d1:a1:a1:b1:be error        # keys not sorted (b must come after a)
-d1:a1:a1:a2:aa error        # duplicate key (implementation may differ; we choose error)
+d1:a1:a1:bd2:bb1:bee {"a": "a", "d": {"b": "b"}}
+d1:c1:a1:b1:be error        # keys not sorted (c must come after a)
+d1:a1:a1:a2:aae error       # duplicate key (implementation may differ; we choose error)
 
 # ----- Combined / Edge Cases -----
 0:0: error                  # multiple top‑level objects
- error                      # empty input
+error                       # empty input
 relwjhrlewjh error          # completely invalid data
