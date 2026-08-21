@@ -8,7 +8,7 @@ This library provides a [bencode](https://en.wikipedia.org/wiki/Bencode) validat
   - [Validate](#validate)
   - [Print](#print)
   - [Parse raw bencode into a C data structure](#parse-raw-bencode-into-a-c-data-structure)
-  - [Credits](#credits)
+- [Credits](#credits)
 
 ## API
 
