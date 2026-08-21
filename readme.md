@@ -1,17 +1,16 @@
 # Bencode reader & validator C library
 
+This library provides a [bencode](https://en.wikipedia.org/wiki/Bencode) validator, pretty printer and parsing functions, featuring:
+- Zero-allocations with minimal state
+- Error messages with column location
+
+
 - [API](#api)
 - [Usage](#usage)
   - [Validate](#validate)
   - [Print](#print)
   - [Parse raw bencode into a C data structure](#parse-raw-bencode-into-a-c-data-structure)
-
-What is [Bencode](https://en.wikipedia.org/wiki/Bencode)?
-
-[This library](https://github.com/0riginaln0/bencode) provides a bencode validator, pretty printer and parsing functions.
-
-- Zero-allocations with minimal state
-- Error messages with column location
+  - [Credits](#credits)
 
 ## API
 
