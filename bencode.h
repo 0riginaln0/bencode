@@ -2,8 +2,6 @@
 #define BENCODE_H
 
 #include <stddef.h>
-#include <stdbool.h>
-#include <limits.h>
 
 typedef struct {
   char *data, *cur, *end;
@@ -34,10 +32,12 @@ bool bencode_validate_value(Bencode_Reader *r, Bencode_Value v, int indent);
 // Prints the bencode value regardless of the data validity
 void bencode_print_value(Bencode_Reader *r, Bencode_Value v, int indent);
 
+#endif /* BENCODE_H */
 #ifdef BENCODE_IMPLEMENTATION
 
+#include <stdio.h>
+#include <limits.h>
 #include <ctype.h>
-#include <stdlib.h>
 #include <string.h>
 
 Bencode_Reader bencode_reader(char *data, size_t len) {
@@ -498,4 +498,3 @@ void bencode_print_value(Bencode_Reader* r, Bencode_Value v, int indent) {
 }
 
 #endif /* BENCODE_IMPLEMENTATION */
-#endif // BENCODE_H
